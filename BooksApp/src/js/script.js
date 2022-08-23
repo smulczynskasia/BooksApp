@@ -14,7 +14,6 @@ const templates = {
   };
 
 function render() {
-    const thisBook = this;
 
     for(let book of dataSource.books){
         const generatedHTML = templates.bookTemplate(book);
