@@ -28,16 +28,18 @@ function render() {
 const favoriteBooks = [];
 
 function initActions() {
-    const imageListContainer = document.querySelectorAll(select.listOf.booksList);
-    for(let image of imageListContainer){
+    const book__image = document.querySelectorAll(select.listOf.booksList);
+    for(let image of book__image){
         image.addEventListener('dblclick', function(event){
             event.preventDefault();
 
             const clickedBook = this;
             
-            clickedBook.classList.add('favorite')
+            clickedBook.classList.add('favorite');
             
-            const bookId = clickedBook.getAttribute('data-id')
+            console.log('clickedBook', favorite);
+
+            const bookId = clickedBook.getAttribute('data-id');
 
             favoriteBooks.push(bookId);
         });
