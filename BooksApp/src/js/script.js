@@ -28,10 +28,10 @@ function render() {
 favoriteBooks = [];
 
 function initActions() {
-    const .books_image = document.querySelectorAll(.booksList);
+    const booksImage = document.querySelectorAll(select.containerOf.image);
 
-    for(let .books_image of .booksList){
-        .books_image.addEventListener('dblclick', function(event){
+    for(let image of booksImage){
+        image.addEventListener('dblclick', function(event){
             event.preventDefault();
 
             const clickedBook = this;
