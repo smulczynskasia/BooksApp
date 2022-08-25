@@ -37,7 +37,7 @@ function initActions() {
             
             clickedBook.classList.add('favorite');
             
-            console.log('clickedBook', favorite);
+            console.log('clickedBook', clickedBook);
 
             const bookId = clickedBook.getAttribute('data-id');
 
