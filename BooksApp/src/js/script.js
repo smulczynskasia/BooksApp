@@ -42,6 +42,7 @@ function initActions() {
             const bookId = clickedBook.getAttribute('data-id');
 
             favoriteBooks.push(bookId);
+            console.log('pushed', favoriteBooks)
         });
     }
 }
