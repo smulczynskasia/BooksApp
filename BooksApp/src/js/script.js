@@ -25,4 +25,25 @@ function render() {
   }
 }
 
+favoriteBooks = [];
+
+function initActions() {
+    const .books_image = document.querySelectorAll(.booksList);
+
+    for(let .books_image of .booksList){
+        .books_image.addEventListener('dblclick', function(event){
+            event.preventDefault();
+
+            const clickedBook = this;
+            
+            clickedBook.classList.add('favorite')
+            
+            const bookId = clickedBook.getAttribute('data-id')
+
+            favoriteBooks.push(bookId);
+        });
+    }
+}
+
 render();
+initActions();
