@@ -25,7 +25,7 @@ function render() {
   }
 }
 
-const favoriteBooks = [];
+const favoriteBooks = {};
 
 function initActions() {
     const book__image = document.querySelectorAll(select.listOf.booksList);
