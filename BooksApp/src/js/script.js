@@ -5,6 +5,7 @@ const select = {
   },
   listOf: {
     booksList: '.books-list',
+    images: 'books-list .book__image',
   },
 };
 
@@ -29,8 +30,8 @@ const favoriteBooks = [];
 console.log(favoriteBooks);
 
 function initActions() {
-    const book__image = document.querySelectorAll(select.containerOf.images);
-    for(let image of book__image){
+    const bookImage = document.querySelectorAll(select.listOf.images);
+    for(let image of bookImage){
         image.addEventListener('dblclick', function(event){
             event.preventDefault();
 
