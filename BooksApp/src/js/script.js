@@ -29,7 +29,7 @@ const favoriteBooks = [];
 console.log(favoriteBooks);
 
 function initActions() {
-    const book__image = document.querySelectorAll(select.listOf.booksList);
+    const book__image = document.querySelectorAll(select.containerOf.images);
     for(let image of book__image){
         image.addEventListener('dblclick', function(event){
             event.preventDefault();
@@ -50,4 +50,3 @@ function initActions() {
 
 render();
 initActions();
-
