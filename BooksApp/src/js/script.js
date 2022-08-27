@@ -30,18 +30,16 @@ const favoriteBooks = [];
 console.log(favoriteBooks);
 
 function initActions() {
-    const bookImage = document.querySelector(select.listOf.images);
-    for(let image of bookImage){
-        image.addEventListener('dblclick', function(event){
+    const booksImages = document.querySelectorAll(select.listOf.images);
+    for(let bookImage of booksImages){
+        bookImage.addEventListener('dblclick', function(event){
             event.preventDefault();
-
-            const clickedBook = this;
             
-            clickedBook.classList.add('favorite');
+            bookImage.classList.add('favorite');
             
-            console.log('clickedBook', clickedBook);
+            console.log('bookImage', bookImage);
 
-            const bookId = clickedBook.getAttribute('data-id');
+            const bookId = bookImage.getAttribute('data-id');
 
             favoriteBooks.push(bookId);
             console.log('pushed', favoriteBooks)
