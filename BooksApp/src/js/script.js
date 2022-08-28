@@ -64,7 +64,7 @@ function initActions() {
     
       filteredBooks.addEventListener('click', function(event){
     
-        if(event.target.name === 'INPUT' && event.target.type === 'checkbox' && event.target.name === 'filter'){
+        if(event.target.tagName === 'INPUT' && event.target.type === 'checkbox' && event.target.name === 'filter'){
             
             if(event.target.checked){
                 filters.push(event.target.value);
