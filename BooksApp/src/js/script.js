@@ -50,7 +50,7 @@ function initActions() {
             console.log('pushed', favoriteBooks);
             }
             
-            else if(bookImage.includes(index))
+            else if(favoriteBooks.includes(index))
 
             bookImage.classList.remove('favorite')
             favoriteBooks.splice(index, 1);
