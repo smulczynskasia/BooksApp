@@ -6,6 +6,7 @@ const select = {
   listOf: {
     booksList: '.books-list',
     images: '.books-list .book__image',
+    image: '.book__image',
     filters: '.filters',
   },
 };
@@ -91,7 +92,7 @@ for(const book of dataSource.books){
     }
 
     if(shouldBeHidden){
-        const bookImageID = document.querySelector(select.listOf.images + '[data-id="' + book.id + '"]');
+        const bookImageID = document.querySelector(select.listOf.image + '[data-id="' + book.id + '"]');
         bookImageID.classList.add('hidden');
     }
     else{
