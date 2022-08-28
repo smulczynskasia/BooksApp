@@ -60,33 +60,23 @@ function initActions() {
         });
     }
 
-   const filtersContainer = document.querySelector(select.listOf.filters);
+    const filteredBooks = document.querySelectordocument.querySelector(select.listOf.filters);
     
-      /* add event listener to filtersContainer */
-      filtersContainer.addEventListener('click', function(event){
-        // event.preventDefault();
-    
-        /* find const of clickedElement */
-        const clickedElement = event.target;
-    
-        /* check if it's a checkbox that was clicked in the whole filters container - event.target */
-        if(event.target.tagName === 'INPUT' && event.target.type === 'checkbox' && event.target.name === 'filter'){
-    
-          // console.log(event.target.value);
-            
-          /* if checked - push it's value to array */
-          if(clickedElement.checked){
-            filters.push(clickedElement.value);
-                  
-            /* if uncheckes - remove from array */
-          } else /* if(!clickedElement.checked) */{
-      
-            /* remove bookID from the array */
-            const indexOfFilterID = filters.indexOf(clickedElement.value);
-            filters.splice(indexOfFilterID, 1);
-          }
+      filteredBooks.addEventListener('click', function(event){
+        //event.preventDefault();
+
+        if(event.target.name == 'INPUT' && event.target.type == 'checkbox' && event.target.name == 'filter'){
+            if(event.target.checked){
+                event.target.push(value);
+
+                console.log(value);
+            }
+            else{
+                const indexOfFilteredBooks = filters.indexOf(value);
+                event.target.splice(indexOfFilteredBooks, 1);
+            }
+            console.log(filters);
         }
-        console.log(filters);
     });
  
 }
