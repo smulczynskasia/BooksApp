@@ -66,10 +66,10 @@ function initActions() {
     
         if(event.target.name === 'INPUT' && event.target.type === 'checkbox' && event.target.name === 'filter'){
             if(event.target.checked){
-                event.target.push(value);
+                event.target.push(event.target.value);
             }
             else{
-                const indexOfFilteredBooks = filters.indexOf(value);
+                const indexOfFilteredBooks = filters.indexOf(event.target.value);
                 event.target.splice(indexOfFilteredBooks, 1);
             }
         }
