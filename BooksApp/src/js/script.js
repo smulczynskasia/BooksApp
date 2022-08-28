@@ -31,10 +31,14 @@ console.log(favoriteBooks);
 
 function initActions() {
     const booksImages = document.querySelectorAll(select.listOf.images);
+    const index = favoriteBooks.indexOf(bookId);
+    
     for(let bookImage of booksImages){
         bookImage.addEventListener('dblclick', function (event) {            
             event.preventDefault();
-                        
+             
+            if(!bookImage.classList.contains('book__image'))
+
             bookImage.classList.add('favorite');
             console.log('bookImage', bookImage);
 
@@ -42,7 +46,13 @@ function initActions() {
             console.log('bookId', bookId);
 
             favoriteBooks.push(bookId);
-            console.log('pushed', favoriteBooks)
+            console.log('pushed', favoriteBooks);
+
+            else if(bookImage.classList.contains('book__image'))
+
+            bookImage.classList.remove('favorite')
+            favoriteBooks.splice(index, 1);
+
         });
     }
 }
