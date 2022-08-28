@@ -65,9 +65,18 @@ function initActions() {
         event.preventDefault();
 
         if(event.target.tagName == 'INPUT' && event.target.type == 'checkbox' && event.target.name == 'filter'){
-            console.log(filters);
+            if(event.target.checked == true){
+                filters.push(event.target.value);
+            }
+            else if(event.target.checked !== true){
+                const indexOfFilteredId = filters.indexOf(event.target.value);
+                filters.splice(index, 1);
+            }
+            }
         }
-    });
+
+        console.log(filters);
+    );
 }
 
 render();
