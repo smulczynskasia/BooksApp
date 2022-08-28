@@ -50,11 +50,11 @@ function initActions() {
             console.log('pushed', favoriteBooks);
             }
             
-            else if(favoriteBooks.includes(index))
-
+            else if(bookImage.classList.contains('favorite')){
+              
             bookImage.classList.remove('favorite')
-            favoriteBooks.splice(index, 1);
-
+            favoriteBooks.splice(index, 1);  
+            }
         });
     }
 }
