@@ -50,9 +50,9 @@ function initActions() {
             console.log('pushed', favoriteBooks);
             }
             
-            else if(bookImage.classList.contains('favorite')){
+            else if(event.target.offsetParent.classList.contains('favorite')){
               
-            bookImage.classList.remove('favorite')
+            event.target.offsetParent.classList.remove('favorite')
             favoriteBooks.splice(index, 1);  
             }
         });
