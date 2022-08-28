@@ -70,6 +70,8 @@ function initActions() {
         if(event.target.name == 'INPUT' && event.target.type == 'checkbox' && event.target.name == 'filter'){
             if(event.target.checked){
                 event.target.push(value);
+
+                console.log(value);
             }
             else{
                 const indexOfFilteredBooks = filters.indexOf(value);
