@@ -40,7 +40,7 @@ function initActions() {
             event.preventDefault();
              
             if(!event.target.offsetParent.classList.contains('.book__image')){
-            bookImage.classList.add('favorite');
+            event.target.offsetParent.classList.add('favorite');
             console.log('bookImage', bookImage);
 
             const bookId = bookImage.getAttribute('data-id');
@@ -52,7 +52,7 @@ function initActions() {
             
             else if(event.target.offsetParent.classList.contains('.book__image')){
               
-            bookImage.classList.remove('favorite')
+            event.target.offsetParent.classList.remove('favorite')
             favoriteBooks.splice(index, 1);  
             }
         });
