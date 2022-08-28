@@ -60,7 +60,7 @@ function initActions() {
         });
     }
 
-    const filteredBooks = document.querySelectordocument.querySelector(select.listOf.filters);
+    const filteredBooks = document.querySelector(select.listOf.filters);
     
       filteredBooks.addEventListener('click', function(event){
         //event.preventDefault();
