@@ -58,7 +58,6 @@ function initActions() {
             favoriteBooks.splice(index, 1);  
             }
         });
-    }
 
     const filtersContainer = document.querySelector(select.listOf.filters);
     filtersContainer.addEventListener('click', function(event){
@@ -73,6 +72,8 @@ function initActions() {
             console.log(filters);
         }
     );
+    }
+
 }
 
 render();
