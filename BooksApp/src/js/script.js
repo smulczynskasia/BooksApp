@@ -60,9 +60,9 @@ function initActions() {
         });
     }
 
-    const filteredBooks = document.querySelector(select.listOf.filters);
+    const filteredBooksContainer = document.querySelector(select.listOf.filters);
     
-      filteredBooks.addEventListener('click', function(event){
+      filteredBooksContainer.addEventListener('click', function(event){
     
         if(event.target.tagName === 'INPUT' && event.target.type === 'checkbox' && event.target.name === 'filter'){
             
@@ -79,6 +79,27 @@ function initActions() {
  
 }
 
+function filterBooks(){
+for(const book of dataSource.books){
+    let shouldBeHidden = false;
+    for(const filter of filters){
+        if(!book.details[filter]){
+            shouldBeHidden = true;
+            breake;
+        }
+    }
+
+    if(shouldBeHidden){
+        const bookImageID = document.querySelector(select.containerOf.image + '[data-id="' + book.id + '"]');
+        bookImageID.classList.add('hidden');
+    }
+    else{
+        bookImageID.classList.remove('hidden');
+    }
+
+}
+
+}
+
 render();
 initActions();
-
