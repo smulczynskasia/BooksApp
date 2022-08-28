@@ -63,20 +63,17 @@ function initActions() {
     const filteredBooks = document.querySelector(select.listOf.filters);
     
       filteredBooks.addEventListener('click', function(event){
-        //event.preventDefault();
-
+    
         if(event.target.name == 'INPUT' && event.target.type == 'checkbox' && event.target.name == 'filter'){
             if(event.target.checked){
                 event.target.push(value);
-
-                console.log(value);
             }
             else{
                 const indexOfFilteredBooks = filters.indexOf(value);
                 event.target.splice(indexOfFilteredBooks, 1);
             }
-            console.log(filters);
         }
+        console.log(filters);
     });
  
 }
