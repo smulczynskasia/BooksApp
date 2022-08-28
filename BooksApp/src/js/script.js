@@ -39,7 +39,7 @@ function initActions() {
            
             event.preventDefault();
              
-            if(!bookImage.classList.contains('favorite')){
+            if(!event.target.offsetParent.classList.contains('.book__image')){
             bookImage.classList.add('favorite');
             console.log('bookImage', bookImage);
 
@@ -50,7 +50,7 @@ function initActions() {
             console.log('pushed', favoriteBooks);
             }
             
-            else if(bookImage.classList.contains('favorite')){
+            else if(event.target.offsetParent.classList.contains('.book__image')){
               
             bookImage.classList.remove('favorite')
             favoriteBooks.splice(index, 1);  
