@@ -61,9 +61,7 @@ function initActions() {
     }
 
     const filteredBooks = document.querySelector(select.listOf.filters);
-    filteredBooks.addEventListener('click', function (event) {            
-        event.preventDefault();
-    })
+    
 }
 
 render();
