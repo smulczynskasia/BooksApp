@@ -65,7 +65,7 @@ function initActions() {
         event.preventDefault();
 
         if(event.target.tagName == 'INPUT' && event.target.type == 'checkbox' && event.target.name == 'filter'){
-            if(event.target.checked == true){
+            if(event.target.checked){
                 filters.push(event.target.value);
             }
             else {
