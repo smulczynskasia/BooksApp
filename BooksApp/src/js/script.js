@@ -65,12 +65,13 @@ function initActions() {
       filteredBooks.addEventListener('click', function(event){
     
         if(event.target.name === 'INPUT' && event.target.type === 'checkbox' && event.target.name === 'filter'){
+            
             if(event.target.checked){
-                event.target.push(event.target.value);
+                filters.push(event.target.value);
             }
             else{
                 const indexOfFilteredBooks = filters.indexOf(event.target.value);
-                event.target.splice(indexOfFilteredBooks, 1);
+                filters.splice(indexOfFilteredBooks, 1);
             }
         }
         console.log(filters);
