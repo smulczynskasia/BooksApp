@@ -6,6 +6,7 @@ const select = {
   listOf: {
     booksList: '.books-list',
     images: '.books-list .book__image',
+    filters: '.filters',
   },
 };
 
@@ -28,6 +29,7 @@ function render() {
 
 const favoriteBooks = [];
 console.log(favoriteBooks);
+const filters = [];
 
 function initActions() {
     const booksImages = document.querySelectorAll(select.listOf.images);
@@ -57,8 +59,16 @@ function initActions() {
             }
         });
     }
+
+    const booksContainer = document.querySelectorAll(select.listOf.filters);
+    booksContainer.addEventListener('click', function(event){
+        event.preventDefault();
+
+        if(event.target.tagName == 'INPUT' && event.target.type == 'checkbox' && event.target.name == 'filter'){
+            console.log(filters);
+        }
+    });
 }
 
 render();
 initActions();
-
