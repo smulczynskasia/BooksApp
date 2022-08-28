@@ -59,11 +59,6 @@ function initActions() {
             }
         });
     }
-    const filtersContainer = document.querySelector(select.listOf.filters);
-    filtersContainer.addEventListener('click', function(event){
-        event.preventDefault();
-    }
-    );
 
 }
 
