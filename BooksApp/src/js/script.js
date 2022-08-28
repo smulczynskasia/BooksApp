@@ -96,7 +96,8 @@ for(const book of dataSource.books){
         const bookImageID = document.querySelector(select.containerOf.image + '[data-id="' + book.id + '"]');
         
         bookImageID.classList.add('hidden');
-      }else{
+      }
+      else{
         bookImageID.classList.remove('hidden');
       }
 
