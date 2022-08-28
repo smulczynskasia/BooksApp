@@ -40,6 +40,7 @@ function initActions() {
             console.log('bookImage', bookImage);
 
             const bookId = bookImage.getAttribute('data-id');
+            console.log('bookId', bookId);
 
             favoriteBooks.push(bookId);
             console.log('pushed', favoriteBooks)
