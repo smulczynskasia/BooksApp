@@ -75,6 +75,7 @@ function initActions() {
             }
         }
         console.log(filters);
+        filterBooks();
     });
  
 }
