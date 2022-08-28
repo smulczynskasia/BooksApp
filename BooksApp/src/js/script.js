@@ -73,9 +73,8 @@ function initActions() {
                 filters.splice(index, 1);
             }
             }
+            console.log(filters);
         }
-
-        console.log(filters);
     );
 }
 
