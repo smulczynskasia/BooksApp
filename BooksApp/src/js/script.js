@@ -31,7 +31,7 @@ console.log(favoriteBooks);
 
 function initActions() {
     const booksImages = document.querySelectorAll(select.listOf.images);
-    const index = favoriteBooks.indexOf(bookId);
+    const index = favoriteBooks.indexOf('data-id');
     
     for(let bookImage of booksImages){
         bookImage.addEventListener('dblclick', function (event) {            
