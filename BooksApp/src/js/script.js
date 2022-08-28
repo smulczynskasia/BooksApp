@@ -31,10 +31,12 @@ console.log(favoriteBooks);
 
 function initActions() {
     const booksImages = document.querySelectorAll(select.listOf.images);
-    const index = favoriteBooks.indexOf('data-id');
-    
+    const index = favoriteBooks.indexOf(bookId);
+
+
     for(let bookImage of booksImages){
         bookImage.addEventListener('dblclick', function (event) {            
+           
             event.preventDefault();
              
             if(!bookImage.classList.contains('favorite')){
