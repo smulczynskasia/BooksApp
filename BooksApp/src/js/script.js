@@ -30,9 +30,10 @@ const favoriteBooks = [];
 console.log(favoriteBooks);
 
 function initActions() {
-    const booksImages = document.querySelectorAll(select.listOf.images);
+    const booksImages = document.querySelector(select.listOf.images);
     for(let bookImage of booksImages){
-        bookImage.addEventListener('dblclick', function (event) {            event.preventDefault();
+        bookImage.addEventListener('dblclick', function (event) {            
+            event.preventDefault();
             
             bookImage.classList.add('favorite');
             
