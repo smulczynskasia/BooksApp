@@ -31,7 +31,7 @@ console.log(favoriteBooks);
 
 function initActions() {
     const booksImages = document.querySelectorAll(select.listOf.images);
-    const index = favoriteBooks.indexOf(bookId);
+    const index = favoriteBooks.indexOf('data-id');
 
 
     for(let bookImage of booksImages){
@@ -50,7 +50,7 @@ function initActions() {
             console.log('pushed', favoriteBooks);
             }
             
-            else if(bookImage.classList.contains(index))
+            else if(bookImage.includes(index))
 
             bookImage.classList.remove('favorite')
             favoriteBooks.splice(index, 1);
