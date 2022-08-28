@@ -34,7 +34,7 @@ function initActions() {
     for(let bookImage of booksImages){
         bookImage.addEventListener('dblclick', function (event) {            
             event.preventDefault();
-            
+                        
             bookImage.classList.add('favorite');
             console.log('bookImage', bookImage);
 
