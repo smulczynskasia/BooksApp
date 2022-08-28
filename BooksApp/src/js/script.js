@@ -73,9 +73,10 @@ function initActions() {
                 const indexOfFilteredBooks = filters.indexOf(value);
                 event.target.splice(indexOfFilteredBooks, 1);
             }
+            console.log(filters);
         }
     });
-    console.log(filters);
+ 
 }
 
 render();
