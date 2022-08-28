@@ -39,8 +39,8 @@ function initActions() {
            
             event.preventDefault();
              
-            if(!bookImage.classList.contains('favorite')){
-            bookImage.classList.add('favorite');
+            if(!event.target.offsetParent.classList.contains('favorite')){
+            event.target.offsetParent.classList.add('favorite');
             console.log('bookImage', bookImage);
 
             const bookId = bookImage.getAttribute('data-id');
