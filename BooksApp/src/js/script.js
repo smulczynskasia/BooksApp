@@ -60,22 +60,6 @@ function initActions() {
         });
     }
 
-    const filtersContainer = document.querySelector(select.listOf.filters);
-    filtersContainer.addEventListener('click', function(event){
-        event.preventDefault();
-
-        if(event.target.tagName == 'INPUT' && event.target.type == 'checkbox' && event.target.name == 'filter'){
-            if(event.target.checked){
-                filters.push(event.target.value);
-            }
-            else {
-                const indexOfFilteredId = filters.indexOf(event.target.value);
-                filters.splice(indexOfFilteredId, 1);
-            }
-            }
-            console.log(filters);
-        }
-    );
 }
 
 render();
