@@ -70,7 +70,7 @@ function initActions() {
             }
             else if(event.target.checked == false){
                 const indexOfFilteredId = filters.indexOf(event.target.value);
-                filters.splice(index, 1);
+                filters.splice(indexOfFilteredId, 1);
             }
             }
             console.log(filters);
