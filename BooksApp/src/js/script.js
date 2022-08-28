@@ -5,7 +5,7 @@ const select = {
   },
   listOf: {
     booksList: '.books-list',
-    images: 'books-list .book__image',
+    images: '.books-list .book__image',
   },
 };
 
@@ -30,13 +30,12 @@ const favoriteBooks = [];
 console.log(favoriteBooks);
 
 function initActions() {
-    const booksImages = document.querySelectorAll(select.listOf.booksList);
+    const booksImages = document.querySelectorAll(select.listOf.images);
     for(let bookImage of booksImages){
         bookImage.addEventListener('dblclick', function (event) {            
             event.preventDefault();
             
             bookImage.classList.add('favorite');
-            
             console.log('bookImage', bookImage);
 
             const bookId = bookImage.getAttribute('data-id');
