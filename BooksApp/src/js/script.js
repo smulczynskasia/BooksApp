@@ -86,7 +86,7 @@ for(const book of dataSource.books){
     for(const filter of filters){
         if(!book.details[filter]){
             shouldBeHidden = true;
-            breake;
+            break;
         }
     }
 
