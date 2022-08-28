@@ -37,7 +37,7 @@ function initActions() {
         bookImage.addEventListener('dblclick', function (event) {            
             event.preventDefault();
              
-            if(!bookImage.classList.contains('book__image')){
+            if(!bookImage.classList.contains('favorite')){
             bookImage.classList.add('favorite');
             console.log('bookImage', bookImage);
 
@@ -48,7 +48,7 @@ function initActions() {
             console.log('pushed', favoriteBooks);
             }
             
-            else if(bookImage.classList.contains('book__image'))
+            else if(bookImage.classList.contains('faovrite'))
 
             bookImage.classList.remove('favorite')
             favoriteBooks.splice(index, 1);
