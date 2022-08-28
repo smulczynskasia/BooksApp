@@ -72,10 +72,10 @@ function initActions() {
             else{
                 const indexOfFilteredBooks = filters.indexOf(value);
                 event.target.splice(indexOfFilteredBooks, 1);
-
             }
         }
-    })
+        console.log(filters);
+    });
 }
 
 render();
