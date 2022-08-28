@@ -39,7 +39,7 @@ function initActions() {
            
             event.preventDefault();
              
-            if(!event.target.offsetParent.classList.contains('book__image')){
+            if(!event.target.offsetParent.classList.contains('.book__image')){
             event.target.offsetParent.classList.add('favorite');
             console.log('bookImage', bookImage);
 
@@ -50,10 +50,10 @@ function initActions() {
             console.log('pushed', favoriteBooks);
             }
             
-            else if(event.target.offsetParent.classList.contains('book__image')){
+            else if(event.target.offsetParent.classList.contains('.book__image')){
               
-            event.target.offsetParent.classList.remove('favorite')
-            favoriteBooks.splice(index, 1);  
+                event.target.offsetParent.classList.remove('favorite');
+                favoriteBooks.splice(index, 1);  
             }
         });
     }
