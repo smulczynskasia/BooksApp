@@ -60,6 +60,19 @@ function initActions() {
         });
     }
 
+    const filtersContainer = document.querySelector(select.listOf.filters);
+    filtersContainer.addEventListener('click', function(event){
+        event.preventDefault();
+
+        if(event.target.tagName == 'INPUT' && event.target.type == 'checkbox' && event.target.name == 'filter'){
+            if(event.target.checked){
+                filters.push(event.target.value);
+            }
+            
+            }
+            console.log(filters);
+        }
+    );
 }
 
 render();
