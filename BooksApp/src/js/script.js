@@ -91,6 +91,14 @@ for(const book of dataSource.books){
         }
     }
 
+    if(shouldBeHidden === true){
+        const bookImageID = document.querySelector(select.listOf.image + '[data-id="'+ book.id +'"]');
+        bookImageID.classList.add('hidden');
+    }
+    else{
+        bookImageID.classList.remove('hidden');
+    }
+
 }
 
 }
