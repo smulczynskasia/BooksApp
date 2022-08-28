@@ -68,7 +68,7 @@ function initActions() {
             if(event.target.checked == true){
                 filters.push(event.target.value);
             }
-            else if(event.target.checked !== true){
+            else if(event.target.checked == false){
                 const indexOfFilteredId = filters.indexOf(event.target.value);
                 filters.splice(index, 1);
             }
