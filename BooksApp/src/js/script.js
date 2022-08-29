@@ -21,7 +21,7 @@ const templates = {
 
 class BooksList{
     constructor(){
-        const thisBook = this;
+        const thisBooksList = this;
 
         thisBooksList.initData();
         thisBooksList.render();
