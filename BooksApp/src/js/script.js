@@ -19,9 +19,34 @@ const templates = {
   bookTemplate: Handlebars.compile(document.querySelector(select.templateOf.books).innerHTML),
 };
 
-function render() {
+class booksList{
+    constructor(){
+        const thisBook = this;
 
-  for(let book of dataSource.books){
+        thisBooksList.initData();
+        thisBooksList.render();
+        thisBooksList.initActions();
+        thisBooksList.filterBooks();
+        thisBooksList.determineRatingBgc();
+    }
+
+initData(){
+    this.data = dataSource.book;
+}
+
+getElements(){
+    const thisBooksList = this;
+
+    thisBooksList.bookListContainer = document.querySelector(select.listOf.booksList);
+    thisBooksList.booksImages = document.querySelectorAll(select.listOf.images);
+    thisBooksList.filteredBooksContainer = document.querySelector(select.listOf.filters);
+    thisBooksList.bookImageID = document.querySelector('.book__image[data-id="' + book.id + '"]');
+}
+
+render() {
+
+    const thisBooksList = this;
+  for(let book of thisBooksList.data){
     const generatedHTML = templates.bookTemplate(book);
 
     const thisBookDOMElement = utils.createDOMFromHTML(generatedHTML);
@@ -30,18 +55,16 @@ function render() {
 
     bookListContainer.appendChild(thisBookDOMElement);
 
-    const ratingBgc = determineRatingBgc(book.rating);
-    book.ratingBgc = ratingBgc;
-    const ratingWidth = book.rating*10;
-    book.ratingWidth = ratingWidth;
+    book.ratingBgc = thisBooksList.determineRatingBgc(book.rating);
+    book.ratingWidth = book.rating*10;
   }
 }
 
 const favoriteBooks = [];
 console.log(favoriteBooks);
-const filters = [];
+thisBooksList.filters = [];
 
-function initActions() {
+initActions() {
     const booksImages = document.querySelectorAll(select.listOf.images);
     const index = favoriteBooks.indexOf('data-id');
 
@@ -72,7 +95,7 @@ function initActions() {
 
     const filteredBooksContainer = document.querySelector(select.listOf.filters);
     
-      filteredBooksContainer.addEventListener('click', function(event){
+      thisBooksList.filteredBooksContainer.addEventListener('click', function(event){
     
         if(event.target.tagName === 'INPUT' && event.target.type === 'checkbox' && event.target.name === 'filter'){
             
@@ -90,7 +113,7 @@ function initActions() {
  
 }
 
-function filterBooks(){
+ filterBooks(){
 
 for(const book of dataSource.books){
     let shouldBeHidden = false;
@@ -113,7 +136,7 @@ for(const book of dataSource.books){
 
 }
 
-function determineRatingBgc(rating){
+ determineRatingBgc(rating){
     if(rating < 6){
        return 'background: linear-gradient(to bottom,  #fefcea 0%, #f1da36 100%)';
     }else if(rating > 6 && rating <= 8){
@@ -125,6 +148,7 @@ function determineRatingBgc(rating){
     }
     
 }
+}
+const app = new BooksList();
+app();
 
-render();
-initActions();
