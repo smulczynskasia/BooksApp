@@ -30,7 +30,7 @@ function render() {
 
     bookListContainer.appendChild(thisBookDOMElement);
 
-    const ratingBgc = dataSource.books.determineRatingBgc(book.rating);
+    const ratingBgc = bookListContainer.determineRatingBgc(book.rating);
     const ratingWidth = book.rating*10;
   }
 }
