@@ -9,6 +9,9 @@ const select = {
     image: '.book__image',
     filters: '.filters',
   },
+  imageParams: {
+    id: '.book-id',
+  }
 };
 
 const templates = {
