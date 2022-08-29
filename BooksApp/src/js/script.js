@@ -85,7 +85,7 @@ function initActions() {
 }
 
 function filterBooks(){
-    const bookImageID = document.querySelector(select.listOf.image + '[data-id = "' + book.id + '"]');
+    const bookImageID = document.querySelector('.book__image[data-id="' + book.id + '"]');
 
 for(const book of dataSource.books){
     let shouldBeHidden = false;
