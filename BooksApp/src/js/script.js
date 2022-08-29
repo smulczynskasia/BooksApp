@@ -31,7 +31,9 @@ function render() {
     bookListContainer.appendChild(thisBookDOMElement);
 
     const ratingBgc = determineRatingBgc(book.rating);
+    book.ratingBgc = ratingBgc;
     const ratingWidth = book.rating*10;
+    book.ratingWidth = ratingWidth;
   }
 }
 
