@@ -39,7 +39,6 @@ getElements(){
 
     thisBooksList.bookListContainer = document.querySelector(select.listOf.booksList);
     thisBooksList.booksImages = document.querySelectorAll(select.listOf.images);
-    thisBooksList.filteredBooksContainer = document.querySelector(select.listOf.filters);
     thisBooksList.bookImageID = document.querySelector('.book__image[data-id="' + book.id + '"]');
 }
 
