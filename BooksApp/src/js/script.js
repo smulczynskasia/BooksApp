@@ -85,18 +85,17 @@ function initActions() {
 }
 
 function filterBooks(){
-const bookId = book.id;
-const bookImageID = document.querySelector(select.listOf.image + '[data-id="' + bookId + '"]');
 for(const book of dataSource.books){
     let shouldBeHidden = false;
     for(const filter of filters){
         if(!book.details[filter]){
-            shouldBeHidden = true;
+           shouldBeHidden = true;
             break;
         }
     }
 
-    if(shouldBeHidden === true){
+    if(shouldBeHidden){
+        const bookImageID = document.querySelector(select.listOf.image + '[data-id="' + book.id + '"]');
         bookImageID.classList.add('hidden');
     }
     else{
