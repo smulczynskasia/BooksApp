@@ -2,6 +2,7 @@
 const select = {
   templateOf: {
     books: '#template-book',
+
   },
   listOf: {
     booksList: '.books-list',
@@ -28,6 +29,9 @@ function render() {
     const bookListContainer = document.querySelector(select.listOf.booksList);
 
     bookListContainer.appendChild(thisBookDOMElement);
+
+    const ratingBgc = dataSource.book.determineRatingBgc(book.rating);
+    const ratingWidth = book.rating*10;
   }
 }
 
@@ -105,6 +109,19 @@ for(const book of dataSource.books){
 
 }
 
+}
+
+function determineRatingBgc(rating){
+    if(rating < 6){
+       return 'background: linear-gradient(to bottom,  #fefcea 0%, #f1da36 100%)';
+    }else if(rating > 6 && <= 8){
+       return 'background: linear-gradient(to bottom, #b4df5b 0%,#b4df5b 100%)';
+    }else if(rating > 8 && <= 9){
+       return 'background: linear-gradient(to bottom, #299a0b 0%, #299a0b 100%)';
+    }else if(rating > 9){
+       return 'background: linear-gradient(to bottom, #ff0084 0%,#ff0084 100%)';
+    }
+    
 }
 
 render();
