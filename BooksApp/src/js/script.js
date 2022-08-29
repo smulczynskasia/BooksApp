@@ -31,7 +31,7 @@ class BooksList{
     }
 
 initData(){
-    this.data = dataSource.book;
+    this.data = dataSource.books;
 }
 
 getElements(){
