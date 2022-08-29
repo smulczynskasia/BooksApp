@@ -95,7 +95,7 @@ for(const book of dataSource.books){
     }
 
     if(shouldBeHidden){
-        const bookImageID = document.querySelector(select.listOf.image + '[data-id="' + book.id + '"]');
+        const bookImageID = document.querySelector(select.listOf.image[data-id="' + book.id + '"]);
         bookImageID.classList.add('hidden');
     }
     else{
@@ -108,4 +108,3 @@ for(const book of dataSource.books){
 
 render();
 initActions();
-
