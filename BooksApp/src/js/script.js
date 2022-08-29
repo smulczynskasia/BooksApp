@@ -61,6 +61,8 @@ render() {
 }
 
 initActions() {
+    thisBooksList.favoriteBooks = [];
+    console.log(favoriteBooks);
     const booksImages = document.querySelectorAll(select.listOf.images);
     const index = favoriteBooks.indexOf('data-id');
 
@@ -88,8 +90,7 @@ initActions() {
             }
         });
     }
-    thisBooksList.favoriteBooks = [];
-    console.log(favoriteBooks);
+
     thisBooksList.filters = [];
     const filteredBooksContainer = document.querySelector(select.listOf.filters);
     
