@@ -91,7 +91,7 @@ initActions() {
         });
     }
 
-    thisBooksList.filters = [];
+    filters = [];
     const filteredBooksContainer = document.querySelector(select.listOf.filters);
     
       filteredBooksContainer.addEventListener('click', function(event){
