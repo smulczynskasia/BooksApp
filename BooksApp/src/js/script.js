@@ -62,7 +62,7 @@ render() {
 
 initActions() {
     const thisBooksList = this;
-    thisBooksList.favoriteBooks = [];
+    const favoriteBooks = [];
     const booksImages = document.querySelectorAll(select.listOf.images);
     const index = favoriteBooks.indexOf('data-id');
 
