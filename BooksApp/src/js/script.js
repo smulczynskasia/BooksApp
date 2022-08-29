@@ -94,7 +94,7 @@ initActions() {
     thisBooksList.filters = [];
     const filteredBooksContainer = document.querySelector(select.listOf.filters);
     
-      thisBooksList.filteredBooksContainer.addEventListener('click', function(event){
+      filteredBooksContainer.addEventListener('click', function(event){
     
         if(event.target.tagName === 'INPUT' && event.target.type === 'checkbox' && event.target.name === 'filter'){
             
