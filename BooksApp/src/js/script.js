@@ -21,7 +21,9 @@ const templates = {
 
 function render() {
 
-  for(let book of dataSource.books){
+    const thisBooksList = this;
+
+  for(let book of thisBooksList.dataSource.books){
     const generatedHTML = templates.bookTemplate(book);
 
     const thisBookDOMElement = utils.createDOMFromHTML(generatedHTML);
@@ -30,7 +32,7 @@ function render() {
 
     bookListContainer.appendChild(thisBookDOMElement);
 
-    const ratingBgc = dataSource.book.determineRatingBgc(book.rating);
+    const ratingBgc = thisBooksList.determineRatingBgc(book.rating);
     const ratingWidth = book.rating*10;
   }
 }
