@@ -23,7 +23,7 @@ function render() {
 
     const thisBooksList = this;
 
-  for(let book of thisBooksList.dataSource.books){
+  for(let book of thisBooksList.dataSource){
     const generatedHTML = templates.bookTemplate(book);
 
     const thisBookDOMElement = utils.createDOMFromHTML(generatedHTML);
