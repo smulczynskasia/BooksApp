@@ -26,7 +26,7 @@ function render() {
     const bookListContainer = document.querySelector(select.listOf.booksList);
 
     bookListContainer.appendChild(thisBookDOMElement);
-    const ratingBgc = this.determineRatingBgc(book.rating);
+    const ratingBgc = determineRatingBgc(book.rating);
     const ratingWidth = book.rating * 10;
   }
 }
