@@ -149,5 +149,5 @@ for(const book of dataSource.books){
 }
 }
 const app = new BooksList();
-app();
+app.init();
 
