@@ -113,7 +113,6 @@ class BooksList {
     }
 
     filterBooks() {
-        const filters = [];
 
         for (const book of dataSource.books) {
             let shouldBeHidden = false;
