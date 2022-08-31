@@ -110,9 +110,12 @@ class BooksList {
     }
 
     filterBooks() {
+
+        const thisBook = this;
+
         for (const book of dataSource.books) {
             let shouldBeHidden = false;
-            for (const filter of filters) {
+            for (const filter of thisBook.filters) {
                 if (!book.details[filter]) {
                     shouldBeHidden = true;
                     break;
