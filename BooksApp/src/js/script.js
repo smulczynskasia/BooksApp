@@ -44,7 +44,8 @@ class BooksList {
 
     render() {
 
-        for (let book of dataSource.books) {
+        const thisBooksList = this;
+        for (let book of thisBooksList.data) {
             const generatedHTML = templates.bookTemplate(book);
 
             const thisBookDOMElement = utils.createDOMFromHTML(generatedHTML);
