@@ -112,6 +112,7 @@ initActions() {
 }
 
  filterBooks(){
+    const filters = [];
 
 for(const book of dataSource.books){
     let shouldBeHidden = false;
@@ -149,5 +150,4 @@ for(const book of dataSource.books){
 }
 const app = new BooksList();
 app();
-
 
