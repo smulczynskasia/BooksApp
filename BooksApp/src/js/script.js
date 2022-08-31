@@ -1,31 +1,3 @@
-Skip to content
-Search or jump to…
-Pull requests
-Issues
-Marketplace
-Explore
- 
-@smulczynskasia 
-smulczynskasia
-/
-BooksApp
-Public
-Code
-Issues
-Pull requests
-Actions
-Projects
-Wiki
-Security
-Insights
-Settings
-BooksApp/BooksApp/src/js/script.js /
-@smulczynskasia
-smulczynskasia Update script.js
-Latest commit ddb4912 2 days ago
- History
- 1 contributor
-107 lines (81 sloc)  2.91 KB
 
 'use strict';
 const select = {
