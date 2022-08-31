@@ -19,6 +19,13 @@ const templates = {
 class BooksList {
     constructor() {
         const thisBooksList = this;
+
+        this.initData();
+        this.getElements();
+        this.render();
+        this.initActions();
+        this.filterBooks();
+        this.determineRatingBgc();
     }
 
     initData() {
@@ -136,3 +143,5 @@ class BooksList {
     }
 
 }
+
+const app = new BooksList();
