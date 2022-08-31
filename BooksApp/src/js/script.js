@@ -151,6 +151,6 @@ class BooksList {
 
 }
 const app = new BooksList();
-app();
+
 
 }
