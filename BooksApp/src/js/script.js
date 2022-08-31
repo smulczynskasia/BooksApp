@@ -52,7 +52,7 @@ class BooksList {
             const bookListContainer = document.querySelector(select.listOf.booksList);
 
             bookListContainer.appendChild(thisBookDOMElement);
-            const ratingBgc = determineRatingBgc(book.rating);
+            const ratingBgc = thisBooksList.determineRatingBgc(book.rating);
             const ratingWidth = book.rating * 10;
         }
     }
