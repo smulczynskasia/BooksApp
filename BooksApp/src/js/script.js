@@ -64,7 +64,7 @@ class BooksList {
         console.log(favoriteBooks);
         const filters = [];
         const index = favoriteBooks.indexOf('data-id');
-
+        const thisBook = this;
 
         for (let bookImage of thisBook.booksImages) {
             bookImage.addEventListener('dblclick', function (event) {
