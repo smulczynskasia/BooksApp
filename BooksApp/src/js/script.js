@@ -62,7 +62,7 @@ class BooksList {
 
         const favoriteBooks = [];
         console.log(favoriteBooks);
-        const filters = [];
+        thisBook.filters = [];
         const index = favoriteBooks.indexOf('data-id');
         const thisBook = this;
 
@@ -106,7 +106,7 @@ class BooksList {
             console.log(filters);
             filterBooks();
         });
-
+        thisBook.filterBooks();
     }
 
     filterBooks() {
